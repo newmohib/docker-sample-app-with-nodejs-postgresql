@@ -1,5 +1,22 @@
 ## How to use this image
 
+### Build and run
+    crate img/ Build
+        1: docker build -t app-name .
+    run img
+        1: docker run app-name
+### Create and Push Repository to docker hub
+    Create a Repository
+        1: docker-nodejs-sample-app
+    Add Repository
+        1: docker tag local-image:tagname new-repo:tagname
+            a: docker tag docker-nodejs-sample-app:latest newmohib/docker-nodejs-sample-app:nodejs-sample-app
+    Push Repository
+        1: docker push new-repo:tagname
+            a: docker push newmohib/docker-nodejs-sample-app:nodejs-sample-app
+    Pull Repository
+        1: docker pull newmohib/docker-nodejs-sample-app:nodejs-sample-app
+
 ### Create a Dockerfile in your Node.js app project
 
     # specify the node base image with your desired version node:<version>

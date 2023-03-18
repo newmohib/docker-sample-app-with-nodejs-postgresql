@@ -1,7 +1,5 @@
-FROM node:18
-WORKDIR /app
-COPY package.json /app
-RUN npm install
+FROM node:alpine
 COPY . /app
+WORKDIR /app
 CMD  node app.js 
 EXPOSE 3003
