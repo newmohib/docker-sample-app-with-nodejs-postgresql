@@ -16,7 +16,12 @@
             a: docker push newmohib/docker-nodejs-sample-app:nodejs-sample-app
     Pull Repository
         1: docker pull newmohib/docker-nodejs-sample-app:nodejs-sample-app
-
+    stop all container
+        1: docker ps -a
+    remove all container and stop
+        1: docker container rm -f $( docker container ls -aq )
+    remove all image
+        1: docker image rm -f $(docker image ls -q)
 ### Create a Dockerfile in your Node.js app project
 
     # specify the node base image with your desired version node:<version>
@@ -51,4 +56,8 @@
     as isolated environment for running an application.
 #### kernel ?
     A kernel manages applictions and hardware resources.
+
+
+## Docker Compose
+
      
