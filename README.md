@@ -61,3 +61,10 @@
 ## Docker Compose
 
      
+
+# install migrate packege
+    1: npm install -g db-migrate
+    1: npm install -g db-migrate-pg
+    3: create a file database.json
+    4: db-migrate create user-table-initialize --sql-file
+    5: db-migrate up
