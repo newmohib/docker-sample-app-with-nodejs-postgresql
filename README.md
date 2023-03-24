@@ -63,8 +63,11 @@
      
 
 # install migrate packege
+    Doucments Url: https://db-migrate.readthedocs.io/en/latest/Getting%20Started/configuration/
     1: npm install -g db-migrate
-    1: npm install -g db-migrate-pg
+    2: npm install -g db-migrate-pg
     3: create a file database.json
     4: db-migrate create user-table-initialize --sql-file
-    5: db-migrate up
+    5: db-migrate up -e prod
+    5: db-migrate down -e prod
+    // defauld value is dev, -e means environmetn form database.json file

@@ -1,13 +1,20 @@
 const express = require('express');
+const dotenv = require('dotenv');
+const { Client } = require('pg')
 const app = express();
+const result = dotenv.config()
+
+if (result.error) {
+  throw result.error
+}
+// console.log(result.parsed)
 
 // Connect to database
-const { Client } = require('pg')
 const client = new Client({
-  host: "localhost",
-  user: "postgres",
-  password: "db",
-  database: "db",
+  host: process.env.PRODUCTION_DATABASE_HOST,
+  user: process.env.PRODUCTION_DATABASE_USER,
+  password: process.env.PRODUCTION_DATABASE_PASSWORD,
+  database: process.env.PRODUCTION_DATABASE_NAME,
   dialect: "postgres",
 })
 client.connect()

@@ -1,9 +1,32 @@
 {
-    "dev":{
+    "dev": {
         "driver": "pg",
-        "host": "localhost",
-        "user": "postgres",
-        "password": "db",
-        "database": "db"
+        "host": {
+            "ENV": "DATABASE_HOST"
+        },
+        "user": {
+            "ENV": "DATABASE_USER"
+        },
+        "password": {
+            "ENV": "DATABASE_PASSWORD"
+        },
+        "database": {
+            "ENV": "DATABASE_NAME"
+        }
+    },
+    "prod": {
+        "driver": "pg",
+        "host": {
+            "ENV": "PRODUCTION_DATABASE_HOST"
+        },
+        "user": {
+            "ENV": "PRODUCTION_DATABASE_USER"
+        },
+        "password": {
+            "ENV": "PRODUCTION_DATABASE_PASSWORD"
+        },
+        "database": {
+            "ENV": "PRODUCTION_DATABASE_NAME"
+        }
     }
 }
