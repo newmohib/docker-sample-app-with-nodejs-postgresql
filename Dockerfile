@@ -1,5 +1,9 @@
-FROM node:alpine
-COPY . /app
+FROM node:latest
 WORKDIR /app
-CMD  ["node app.js"]
-EXPOSE 3003
+ADD . .
+RUN npm install
+RUN npm install -g db-migrate db-migrate-pg 
+RUN db-migrate up -e prod
+CMD [ "node", "index.js" ]
+
+# EXPOSE 3003
