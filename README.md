@@ -6,7 +6,7 @@
     run img
         1: docker run app-name
     run with multple pot 
-        1: 1: docker run -d p 3000:80 -p 8080:80 app-name
+        1: docker run -d -p 3000:80 app-name
     list all container id
         1: docker ps -aq
     remove all container // -f = force 
