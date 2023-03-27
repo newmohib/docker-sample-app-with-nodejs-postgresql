@@ -4,7 +4,16 @@ const app = express();
 
 
 app.get('/', (req, res) => {
-    res.send("Hello Docker application");
+    res.send([
+        {
+            name: "Mohbiur",
+            email: "mohib@gamil.com"
+        },
+        {
+            name: "Mohbiur",
+            email: "mohib@gamil.com"
+        }
+    ]);
 });
 
 
